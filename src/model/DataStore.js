@@ -11,7 +11,8 @@ class DataStore {
     }
 
     setData(newData) {
-        if(this._updateDataFunction) this._updateDataFunction(newData);
+        this._data = newData;
+        this._updateDataFunction?.(this._data);
     }
 
     setUpdateDataFunction(updateDataFunction) {
