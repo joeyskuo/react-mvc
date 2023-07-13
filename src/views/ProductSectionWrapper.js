@@ -7,9 +7,9 @@ const ProductSectionWrapper = props => {
 
     useEffect(() => {
         
-        if(props.registerUseStateHook) registerUseStateHook(setUiData);
+        props.registerUpdateStateFunction?.(setUiData);
 
-    }, props.registerUseStateHook);
+    }, props.registerUpdateStateFunction);
 
 
     return (

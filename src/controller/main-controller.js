@@ -2,7 +2,7 @@ import DataStore from '../model/DataStore';
 
 const dataStore = new DataStore();
 
-const registerUseStateHook = (rootComponentUseStateHook) => {
+const registerUpdateStateFunction = (rootComponentUseStateHook) => {
     dataStore.setUpdateDataFunction(rootComponentUseStateHook);
 }
 
