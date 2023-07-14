@@ -8,16 +8,18 @@ const init = () => {
     const domNode = document.getElementById('#product-section');
     if(!domNode) return;
 
-    // get initial data and transform it to work well with our components
+    // get initial data (to match server-side render) and transform it (to work well with our components)
     const initialRawData = {};
     const transformedData = transformer.transform(initialRawData);
 
     // set transformed data to DataStore
-    
+    controllerFunction('updateData', transformedData);
 
     // render wrapper component
     const root = createRoot(domNode);
-    root.render(<ProductSectionWrapper controllerFunction={controllerFunction} />);
+    root.render(<ProductSectionWrapper 
+                    controllerFunction={controllerFunction} 
+                    initialData={transformedData} />);
 
     return;
 }
