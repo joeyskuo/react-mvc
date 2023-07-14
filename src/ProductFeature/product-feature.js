@@ -21,7 +21,6 @@ const init = () => {
                     controllerFunction={controllerFunction} 
                     initialData={transformedData} />);
 
-    return;
 }
 
 export default init;
