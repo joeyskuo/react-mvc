@@ -16,3 +16,5 @@ const ProductSectionWrapper = props => {
         <ProductSection {...props} />
     )
 }
+
+export default ProductSectionWrapper;
