@@ -8,10 +8,8 @@ const ProductSectionWrapper = props => {
     const {controllerFunction, initialData } = props;
 
     useEffect(() => {
-        
-        props.registerUpdateStateFunction?.(setUiData);
-
-    }, props.registerUpdateStateFunction);
+        controllerFunction?.('registerUpdateStateFunction', setUiData);
+    }, controllerFunction);
 
     const data = uiData ?? initialData;
 
