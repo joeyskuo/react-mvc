@@ -6,7 +6,15 @@ const registerUpdateStateFunction = (rootComponentUseStateHook) => {
     dataStore.setUpdateDataFunction(rootComponentUseStateHook);
 }
 
-const controllerFunction = () => {
+const controllerFunction = (action, actionData) => {
+    
+    switch(action) {
+        case 'updateData': {
+            dataStore.setData(actionData);
+            break;
+        }
+    }
+
     return;
 }
 
