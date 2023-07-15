@@ -1,12 +1,10 @@
 import { createRoot } from 'react-dom/client';
-import DataStore from './model/DataStore';
-import Controller from './controller/Controller';
+import controllerFunction from './controller/main-controller';
 import ProductSectionWrapper from './views/ProductSectionWrapper';
 
 const init = () => {
 
     // create DataStore
-    const dataStore = new DataStore();
 
     // get root component
     const domNode = document.getElementById('#product-section');
@@ -18,9 +16,6 @@ const init = () => {
     // const transformedData = transformer.transform(initialRawData);
 
     // create new controller and set transformed data to DataStore
-    const controller = new Controller(dataStore);
-    const controllerFunction = controller.controllerFunction;
-
     controllerFunction('updateData', transformedData);
 
     // render wrapper component
