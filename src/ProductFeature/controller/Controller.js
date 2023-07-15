@@ -19,7 +19,6 @@ class Controller {
     
         }
     
-        return;
     }
 
 }
