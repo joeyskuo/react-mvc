@@ -14,7 +14,8 @@ const init = () => {
 
     // get initial data (to match server-side render) and transform it (to work well with our components)
     const initialRawData = {};
-    const transformedData = transformer.transform(initialRawData);
+    const transformedData = initialRawData;
+    // const transformedData = transformer.transform(initialRawData);
 
     // create new controller and set transformed data to DataStore
     const controller = new Controller(dataStore);
