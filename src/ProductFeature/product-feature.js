@@ -19,7 +19,7 @@ const init = () => {
     // create new controller and set transformed data to DataStore
     const controller = new Controller(dataStore);
     const controllerFunction = controller.controllerFunction;
-    
+
     controllerFunction('updateData', transformedData);
 
     // render wrapper component
@@ -30,4 +30,6 @@ const init = () => {
 
 }
 
-export default init;
+export default {
+    init
+};
