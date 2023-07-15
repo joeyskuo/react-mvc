@@ -9,11 +9,11 @@ class Controller {
     
         switch(action) {
             case 'registerUpdateStateFunction': {
-                dataStore.setUpdateDataFunction(rootComponentUseStateHook);
+                this.dataStore.setUpdateDataFunction(actionData);
                 break;
             }
             case 'updateData': {
-                dataStore.setData(actionData);
+                this.dataStore.setData(actionData);
                 break;
             }
     
